@@ -1,0 +1,112 @@
+.recipes-element {
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  position: relative;
+  display: grid;
+  align-content: space-between;
+}
+
+.recipes-element:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recipes-element-meal {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.recipes-element-img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.recipes-element-category,
+.recipes-element-country {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.recipes-element-tags,
+.recipes-element-ingredients,
+.recipes-element-instruction {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin: 0.5rem 0;
+}
+
+.recipes-element-instruction {
+  max-height: 4.5rem; /* Approx. 3 lines at 1rem font-size with 1.5 line-height */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  cursor: pointer; /* Indicate interactivity */
+  display: block; /* Remove webkit-box to simplify */
+}
+
+/* Style the scrollbar for WebKit browsers (Chrome, Safari) */
+.recipes-element-instruction::-webkit-scrollbar {
+  width: 6px;
+}
+
+.recipes-element-instruction::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.recipes-element-instruction::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+
+.recipes-element-instruction::-webkit-scrollbar-thumb:hover {
+  background-color: #1d4ed8;
+}
+
+.recipes-element-instruction {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) transparent;
+}
+
+.recipes-element-youtube {
+  color: var(--accent-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.recipes-element-youtube:hover {
+  text-decoration: underline;
+}
+
+.recipes-element-favorite {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.recipes-element-favorite:hover {
+  background-color: var(--accent-color);
+}
+
+.recipes-element-favorite:hover svg {
+  fill: #ffffff;
+}
+
+.recipes-element-favorite-btn {
+  border: none;
+  background: none;
+}

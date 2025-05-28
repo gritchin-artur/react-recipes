@@ -1,0 +1,36 @@
+.recipes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.favorite-btn {
+  display: block;
+  margin: 0 auto 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.favorite-btn:hover {
+  background-color: #15803d;
+}
+
+@media (min-width: 640px) {
+  .recipes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .recipes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

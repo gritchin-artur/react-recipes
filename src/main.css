@@ -1,0 +1,19 @@
+:root {
+  --bg-color: #f3f4f6;
+  --text-color: #1f2937;
+  --card-bg: #ffffff;
+  --accent-color: #2563eb;
+  --secondary-color: #16a34a;
+  --error-bg: #fee2e2;
+  --error-text: #b91c1c;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1f2937;
+  --text-color: #e5e7eb;
+  --card-bg: #374151;
+  --accent-color: #3b82f6;
+  --secondary-color: #22c55e;
+  --error-bg: #7f1d1d;
+  --error-text: #fecaca;
+}
