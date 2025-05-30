@@ -1,8 +1,15 @@
 import { useState } from "react";
 import "./Form.css";
+import useRecipeContext from "../../hooks/useRecipeContext";
 
-export const Form = ({ handleSubmit, className }) => {
+export const Form = ({ className }) => {
   const [preValue, setPreValue] = useState("");
+  const { setRecipeName } = useRecipeContext();
+
+  const handleSubmit = (e, value) => {
+    e.preventDefault();
+    setRecipeName(value);
+  };
 
   return (
     <form onSubmit={(e) => handleSubmit(e, preValue)} className={className}>

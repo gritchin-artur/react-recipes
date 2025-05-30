@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
-import { Hurt } from "../../img/Hurt";
+import { Hurt } from "../../assets/img/Hurt";
 import "./Recipe.css";
-import { YouTube } from "../../img/YouTube";
+import { YouTube } from "../../assets/img/YouTube";
 
 export const Recipe = ({ recipe, idFavorite, setIdFavorite, className }) => {
   const handleClickToFavorite = (id, recipe) => {

@@ -4,12 +4,14 @@ import "./RecipesList.css";
 import { GetRecipes } from "../../api/GetRecipes";
 import { Loader } from "../Loader/Loader";
 import { ErrorMessage } from "../ErrorMessage/ErrorMessage";
+import useRecipeContext from "../../hooks/useRecipeContext";
 
-export const RecipesList = ({ recipeName, className }) => {
+export const RecipesList = ({ className }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState("");
   const [load, setLoad] = useState(false);
+  const { recipeName } = useRecipeContext();
   const [idFavorite, setIdFavorite] = useState(() => {
     const saved = localStorage.getItem("idFavorite");
     return saved ? JSON.parse(saved) : { ids: [], favoriteRecipes: [] };
